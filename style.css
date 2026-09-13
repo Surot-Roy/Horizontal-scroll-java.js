@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* ====================================================================
+   4. Horizontal Members Showcase Section
+   ==================================================================== */
+.horizontal-wrapper {
+  position: relative;
+  height: 350vh;
+  margin-top: 2rem;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 103, 31, 0.05), transparent 70%);
+}
+
+.horizontal-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0 1.5rem;
+}
+
+.horizontal-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.35rem;
+}
+
+.horizontal-slider {
+  display: flex;
+  gap: 1.75rem;
+  padding: 1rem 3.5rem;
+  width: max-content;
+  will-change: transform;
+}
+
+.project-card {
+  min-width: 350px;
+  max-width: 370px;
+  background: var(--navy-surface-elevated);
+  border: 1px solid var(--navy-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-formal);
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--saffron-primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 103, 31, 0.2);
+}
+
+.project-img {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-img img {
+  transform: scale(1.04);
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ff9d5c;
+  background: rgba(255, 103, 31, 0.12);
+  border: 1px solid rgba(255, 103, 31, 0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.project-info h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.project-info p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 1.1rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--saffron-primary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: var(--transition);
+}
+
+.project-link:hover {
+  color: #ff9d5c;
+  transform: translateX(3px);
+}
